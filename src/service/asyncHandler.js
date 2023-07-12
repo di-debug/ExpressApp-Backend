@@ -1,4 +1,3 @@
-c
 // Higher Order Function
 // (fn) => is reference of a function
 
