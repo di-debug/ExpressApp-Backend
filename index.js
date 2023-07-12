@@ -7,13 +7,16 @@ import config from "./src/config/index.js";
     try {
        await mongoose.connect(config.MONGODB_URL)
        console.log("DB CONNECTED !");
+
         app.on('error', (err) => {
             console.error("Error: ", err);
             throw err;
         })
+
         const onListening = () => {
             console.log(`Listening on PORT ${config.PORT}`)
-        }
+        };
+        
         app.listen(config.PORT, onListening);
 
     } catch (error) {

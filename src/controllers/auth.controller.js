@@ -71,7 +71,7 @@ export const login = asyncHandler(async(req, res) => {
         user.password = undefined
         res.cookie("token", token, cookieOptions)
         return res.status(200).json({
-            sucess:true;
+            sucess:true,
             token,
             user
         })
